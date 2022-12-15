@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Respawn - Tienda de videojuegos</title>
+    <link rel="shortcut icon" type="image/png" th:href="@{/img/respawn_logo.PNG}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{styles/styles.css}">
+</head>
+<body>
+    <nav th:replace="components/navbar :: _navbar"></nav>
+
+    <main>
+        <div class="banner__container">
+            <img th:src="@{img/home_banner.png}" alt="Respawn Banner" id="banner">
+        </div>
+
+        <h2>POPULARES</h2>
+        <div class="card__container">
+            <div th:each="juego : ${juegos}">
+                <div th:replace="components/card :: _card"></div>
+            </div>
+        </div>
+
+        <h2>NOVEDADES</h2>
+        <div class="card__container">
+            <div th:each="juego : ${juegos}">
+                <div th:replace="components/card :: _card"></div>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="components/footer"></footer>   
+</body>
+<script defer th:replace="components/utility-js-functionality :: _utility_js"></script>
+</html>

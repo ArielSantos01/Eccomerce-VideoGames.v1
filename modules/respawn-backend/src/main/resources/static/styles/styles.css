@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+:root {
+    --color-1: #EF4027;
+    --color-2: #191B1B;
+    --color-3: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 150px;
+}
+
+body {
+    font-family: 'Gothic A1', sans-serif;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 98px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+footer {
+    background-color: var(--color-1);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 98px;
+    width: 100%;
+}
+
+.footer__upper {
+    padding-left: 15px;
+}
+
+.footer__social {
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+
+.nav__container {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 150px repeat(2, 1fr);
+    padding-bottom: 100px;
+    background: #000;
+}
+
+.nav__logo {
+    height: 100px;
+    width: 150px;
+    padding: 5px;
+}
+
+.nav__sections,
+.nav__form {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.nav__item {
+    display:inline;
+    padding: 10px 40px;
+}
+
+.nav__link {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.search__input {
+    height: 30px;
+    border-radius: 10px;
+}
+
+input::placeholder,
+input[type="search"]{
+    padding-left: 5px;
+}
+
+.nav__btn {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__btn:hover {
+    background: #ccc;
+}
+
+#search_icon,
+#cart_icon,
+#user_icon {
+    width: 23px;
+    height: 23px;
+}
+
+#user_icon {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+main {
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.banner__container {
+    object-fit: contain;
+    width: 100vw;
+}
+
+#banner {
+    width: 98.65vw;
+    height: 60vh;
+    object-fit: fill;
+}
+
+h2 {
+    margin: 25px 0 0 25px;
+}
+
+.card__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 20px 20px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card a {
+    color: #000;
+}
+
+.card__img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card__precio {
+    color: var(--color-1);
+}
+
+.error__container {
+    margin: 25px 0;
+}
+
+.login__container {
+    background-color: var(--color-2);
+}
+
+login__outer__container {
+    background-color: var(--color-3);
+}
+
+.gameTitle {
+    margin: 25px 0px;
+    font-family: Gothic A1;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.buttonsContainer {
+
+}
+
+.form-combo {
+    width: 100%;
+    height: 65%;
+    font-family: 'Gothic A1', sans-serif;
+    background: rgba(255, 255, 255, 0.845);
+}
+
+.form-group {
+    text-align: left;
+}
+
+.buttons-detail:hover{
+    cursor: pointer;
+    background-color: #DA300F !important;
+}
+
+#shop-cart-img {
+    max-width: 30px;
+}
+
+#shop-cart-btn {
+    margin-right: 10px;
+    border-radius: 12px;
+    background-color: #EF4027;
+}
+
+#buy-now-btn {
+    background-color: #EF4027;
+    font-family: Gothic A1, sans-serif;
+    color: white;
+    border-radius: 12px;
+    height: 34.1562px
+}
+
+.buttons {
+    background: #EF4027;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    cursor: pointer;
+}
+.buttons:hover{
+    background: #c73520;
+}
+
+.user__card__dropdown {
+    display: grid;
+}
+
+.user__card__btn {
+    font-size: 12px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user__card__info {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Carrito de compra*/
+.progress-steps {
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    top: 0;
+    opacity: 1;
+    justify-content: center;
+}
+
+.progress-steps .step.active {
+    color: #ff0000;
+
+}
+.progress-steps .step .number {
+    font-size: 15px;
+    box-shadow: 0 0 0 3px #6d6d6d;
+    border-radius: 100px;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.progress-steps .step .text {
+    white-space: nowrap;
+}
+.progress-steps .step .spacer {
+    width: 120px;
+    height: 3px;
+    background-color: #6d6d6d;
+    margin-left: 15px;
+}
+.progress-steps .step .spacer {
+    width: 80px;
+}
+
+.progress-steps .step {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: #6d6d6d;
+}
+
+.delete-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+  margin-top: 15px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

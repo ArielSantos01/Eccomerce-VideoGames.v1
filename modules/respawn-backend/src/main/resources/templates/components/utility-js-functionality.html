@@ -1,0 +1,68 @@
+<script defer th:inline="javascript" th:fragment="_utility_js" xmlns:th="http://www.thymeleaf.org">
+    let btn;
+    try {
+        document.getElementById('login__logout').addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log("logout");
+            window.location.href = window.location.protocol + "//" + window.location.host + "/logout";
+        });
+    } catch (e) {
+        console.log("no logout handler");
+    }
+
+    try {
+        document.getElementById('login__login').addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log("login");
+            window.location.href = window.location.protocol + "//" + window.location.host + "/login";
+        });
+
+        document.getElementById('login__register').addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log("register");
+            window.location.href = window.location.protocol + "//" + window.location.host + "/register";
+        });
+    } catch (e) {
+        console.log("no logged out fn handlers");
+    }
+    
+
+    try {
+        btn = document.getElementById('user__card__button');
+        btn.addEventListener("click", (e) => {
+            console.log(e.target);
+            e.stopPropagation();
+            e.preventDefault();
+            let dropdown = document.getElementById('user__card__dropdown');
+            if(dropdown.classList.contains('show')) {
+                return;
+            }
+            document.getElementById('user__card__dropdown').classList.toggle("show");
+        })
+    } catch (e) {
+        console.log("something went wrong");
+    }
+    
+    try {
+        window.onclick = (e) => {
+            if(!e.target.matches('.dropbtn')) {
+                let dropdowns = document.getElementsByClassName('dropdown-content');
+                for(let i = 0; i < dropdowns.length; ++i) {
+                    const openDropdown = dropdowns[i];
+                    if(openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        console.log("dropdown handler error")
+    }
+    
+    document.getElementById('user_icon').addEventListener("click", (e) => {
+        e.preventDefault();
+        if(btn) {
+            btn.click();
+        }
+    });
+</script>
